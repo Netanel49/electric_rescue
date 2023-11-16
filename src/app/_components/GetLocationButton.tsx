@@ -5,6 +5,8 @@ import NoPremmisionsDialog from './NoPremmisionsDialog';
 
 export default function GetLocationButton() {
   const [phoneValue, setPhoneValue] = useState('');
+  const [infoValue, setInfoValue] = useState('');
+
   const addRescue = trpc.addRescue.useMutation();
   const me = trpc.getMe.useQuery(undefined, {
     refetchOnReconnect: false,
@@ -61,7 +63,7 @@ export default function GetLocationButton() {
 
   return (
     <>
-      <div className="p-6 form-control w-full max-w-xs">
+      <div className="pt-6 form-control w-full max-w-xs">
         <label className="label">
           {phoneValue.length < 6 ? (
             <span className="label-text text-warning">
@@ -79,9 +81,21 @@ export default function GetLocationButton() {
           className="input input-bordered w-full max-w-xs"
         />
       </div>
+      <div className="pt-6 form-control w-full max-w-xs">
+        <label className="label">
+          <span className="label-text">Additional info</span>
+        </label>
+        <input
+          type="tel"
+          placeholder="info"
+          value={phoneValue}
+          onChange={e => setInfoValue(e.target.value)}
+          className="input input-bordered w-full max-w-xs"
+        />
+      </div>
       <button
         onClick={rescueRequest}
-        className="p-6 btn w-52 h-52 rounded-full"
+        className="p-6 mt-6 btn w-52 h-52 rounded-full"
       >
         חשמל אותי
       </button>
