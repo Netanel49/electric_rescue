@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import { serverClient } from '@trpcProviders/serverClient';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/server/auth';
+import { redirect } from 'next/navigation';
+import AdminPanelButton from './_components/AdminPanelButton';
 
 export const metadata: Metadata = {
   title: 'Electric Rescue',
@@ -20,8 +22,9 @@ export default async function Home() {
         </span>
       </h1>
       <div className="flex flex-col items-center justify-center p-8">
-        <GetLocationButton />
         <Login />
+        <GetLocationButton />
+        <AdminPanelButton />
       </div>
     </main>
   );

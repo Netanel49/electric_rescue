@@ -63,7 +63,7 @@ export default function GetLocationButton() {
     <>
       <div className="p-6 form-control w-full max-w-xs">
         <label className="label">
-          {phoneValue.length < 6 && phoneValue.length !== 0 ? (
+          {phoneValue.length < 6 ? (
             <span className="label-text text-warning">
               invalid Phone number
             </span>

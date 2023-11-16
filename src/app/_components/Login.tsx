@@ -9,9 +9,13 @@ export default function Login() {
         if (sessionData?.user) signOut();
         else signIn();
       }}
-      className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+      className={
+        sessionData?.user
+          ? 'mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'
+          : 'mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full'
+      }
     >
-      {sessionData?.user ? <>logout</> : <>login</>}
+      {sessionData?.user ? <>{sessionData.user.name}</> : <>login</>}
     </a>
   );
 }

@@ -1,8 +1,13 @@
-POSTGRES_URL="postgres://default:tHlcmi6us7fv@ep-lively-mountain-91945001-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb"
-POSTGRES_PRISMA_URL="postgres://default:tHlcmi6us7fv@ep-lively-mountain-91945001-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15"
-POSTGRES_URL_NON_POOLING="postgres://default:tHlcmi6us7fv@ep-lively-mountain-91945001.eu-central-1.postgres.vercel-storage.com:5432/verceldb"
-POSTGRES_USER="default"
-POSTGRES_HOST="ep-lively-mountain-91945001-pooler.eu-central-1.postgres.vercel-storage.com"
-POSTGRES_PASSWORD="tHlcmi6us7fv"
-POSTGRES_DATABASE="verceldb"
-NODE_ENV="production"
+POSTGRES_DATABASE=electric_rescue
+POSTGRES_HOST=127.0.0.1
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Aa123456
+POSTGRES_PORT=5432
+AUTH0_SECRET="use [openssl rand -hex 32] to generate a 32 bytes value"
+AUTH0_BASE_URL="http:/localhost:3000"
+AUTH0_ISSUER_BASE_URL="https://dev-nptz4bprn2bncygi.us.auth0.com"
+AUTH0_CLIENT_ID="TZNy8ZXVocuI28HPu3sIhB6CpRRF0yBf"
+AUTH0_CLIENT_SECRET="elVw82HSLVJOuaYDpixJfyYbdtY2r2CSL77K0Ss9jBjqDd1jImwgJVKY8ZgwZVYu"
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+DATABASE_URL=postgres://postgres:Aa123456@localhost/electric_rescue
+RESET_DATABASE=0
