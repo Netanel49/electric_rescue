@@ -42,6 +42,9 @@ export default function GetLocationButton() {
       },
     );
   }
+  if (!me.data) {
+    return <>please log in to continue</>;
+  }
 
   if (!prmessions) {
     return (
@@ -55,7 +58,7 @@ export default function GetLocationButton() {
           }}
           className="btn w-52 h-52 rounded-full"
         >
-          חשמל אותי
+          send location
         </button>
         ;
       </>
