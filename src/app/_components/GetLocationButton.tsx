@@ -95,7 +95,7 @@ export default function GetLocationButton() {
       </div>
       <button
         onClick={rescueRequest}
-        className="p-6 mt-6 btn w-52 h-52 rounded-full"
+        className="p-6 mt-6 btn-primary opacity-70 w-52 h-52 rounded-full"
       >
         חשמל אותי
       </button>
