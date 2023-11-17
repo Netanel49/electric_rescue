@@ -87,7 +87,7 @@ export default function GetLocationButton() {
           <span className="label-text">Additional info</span>
         </label>
         <input
-          type="tel"
+          type="text"
           placeholder="info"
           value={infoValue}
           onChange={e => setInfoValue(e.target.value)}
