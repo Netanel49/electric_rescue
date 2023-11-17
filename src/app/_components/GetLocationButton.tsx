@@ -28,6 +28,7 @@ export default function GetLocationButton() {
               timeStamp: new Date(),
               updatedAt: new Date(),
               phoneNumber: phoneValue,
+              additionalInfo: infoValue,
             });
           }
         if (!prmessions) {
