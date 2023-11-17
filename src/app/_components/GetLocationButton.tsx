@@ -82,7 +82,7 @@ export default function GetLocationButton() {
           placeholder="050-0000000"
           value={phoneValue}
           onChange={e => setPhoneValue(e.target.value)}
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered text-white w-full max-w-xs"
         />
       </div>
       <div className="pt-6 form-control w-full max-w-xs">
@@ -94,7 +94,7 @@ export default function GetLocationButton() {
           placeholder="info"
           value={infoValue}
           onChange={e => setInfoValue(e.target.value)}
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered text-white w-full max-w-xs"
         />
       </div>
       <button
