@@ -88,7 +88,7 @@ export default function GetLocationButton() {
         <input
           type="tel"
           placeholder="info"
-          value={phoneValue}
+          value={infoValue}
           onChange={e => setInfoValue(e.target.value)}
           className="input input-bordered w-full max-w-xs"
         />
