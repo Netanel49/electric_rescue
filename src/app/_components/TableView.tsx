@@ -49,25 +49,27 @@ export default function TableView() {
     columnHelper.accessor(row => row.id, {
       header: 'id',
       sortingFn: 'auto',
-      cell: info => <span>{info.getValue()}</span>,
+      cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.phoneNumber, {
       header: 'phoneNumber',
       sortingFn: 'auto',
-      cell: info => <span>{info.getValue()}</span>,
+      cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.updatedAt, {
       header: 'updatedAt',
       sortingFn: 'auto',
-      cell: info => <span>{info.getValue().getTime()}</span>,
+      cell: info => (
+        <span className="text-white">{info.getValue().getTime()}</span>
+      ),
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.additionalInfo, {
       header: 'additionalInfo',
       sortingFn: 'auto',
-      cell: info => <span>{info.getValue()}</span>,
+      cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.latitude + ',' + row.longitude, {
@@ -76,6 +78,7 @@ export default function TableView() {
       cell: info => (
         <span>
           <a
+            className="text-white"
             target="_blank"
             rel="noopener noreferrer"
             href={`https://google.com/search?q=${info.getValue()}`}
@@ -97,7 +100,7 @@ export default function TableView() {
               status: z.custom<status>().parse(e.target.value),
             });
           }}
-          className={statusColor[info.getValue()]}
+          className={`${statusColor[info.getValue()]} text-white`}
         >
           <option disabled selected>
             {info.getValue()}
