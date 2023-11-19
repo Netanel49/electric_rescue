@@ -87,7 +87,7 @@ export default function GetLocationButton() {
       </div>
       <div className="pt-6 form-control w-full max-w-xs">
         <label className="label">
-          <span className="label-text">Additional info</span>
+          <span className="label-text">vehicle number</span>
         </label>
         <input
           type="text"

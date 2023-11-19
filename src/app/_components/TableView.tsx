@@ -69,7 +69,7 @@ export default function TableView() {
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.additionalInfo, {
-      header: 'additional info',
+      header: 'vehicle number',
       sortingFn: 'auto',
       cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,

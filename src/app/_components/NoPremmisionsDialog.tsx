@@ -5,16 +5,16 @@ export default function NoPremmisionsDialog() {
   return (
     <dialog open id="my_modal_1" className="modal">
       <div className="modal-box">
-        <h3 className="font-bold text-lg" style={rtl}>
+        <h3 className="text-white font-bold text-lg" style={rtl}>
           הרשאות מיקום
         </h3>
-        <p className="py-4 " style={rtl}>
+        <p className="text-white py-4 " style={rtl}>
           בבקשה אשר הרשאות מיקום לאתר זה
         </p>
         <div className="modal-action">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
-            <button className="btn">הבנתי</button>
+            <button className="text-white btn">הבנתי</button>
           </form>
         </div>
       </div>
