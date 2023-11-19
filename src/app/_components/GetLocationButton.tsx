@@ -43,7 +43,7 @@ export default function GetLocationButton() {
     );
   }
   if (!me.data) {
-    return <>please log in to continue</>;
+    return <div className="text-white">please log in to continue</div>;
   }
 
   if (!prmessions) {
@@ -58,7 +58,7 @@ export default function GetLocationButton() {
           }}
           className="btn w-52 h-52 rounded-full"
         >
-          send location
+          <span className="text-white">שלח מיקום</span>
         </button>
         ;
       </>
@@ -101,7 +101,7 @@ export default function GetLocationButton() {
         onClick={rescueRequest}
         className="p-6 mt-6 btn-primary opacity-70 w-52 h-52 rounded-full"
       >
-        חשמל אותי
+        <span className="text-white">שלח מיקום</span>
       </button>
     </>
   );
