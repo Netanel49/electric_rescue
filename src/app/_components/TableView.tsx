@@ -53,21 +53,23 @@ export default function TableView() {
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.phoneNumber, {
-      header: 'phoneNumber',
+      header: 'phone number',
       sortingFn: 'auto',
       cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.updatedAt, {
-      header: 'updatedAt',
+      header: 'updated at',
       sortingFn: 'auto',
       cell: info => (
-        <span className="text-white">{info.getValue().getTime()}</span>
+        <div className="max-w-[10rem]">
+          <span className="text-white">{info.getValue().toString()}</span>
+        </div>
       ),
       footer: info => info.column.id,
     }),
     columnHelper.accessor(row => row.additionalInfo, {
-      header: 'additionalInfo',
+      header: 'additional info',
       sortingFn: 'auto',
       cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: info => info.column.id,
@@ -113,15 +115,19 @@ export default function TableView() {
       footer: status => status.column.id,
     }),
     columnHelper.accessor(row => row.timeStamp, {
-      header: 'timeStamp',
+      header: 'created at',
       sortingFn: 'auto',
-      cell: info => <span>{info.getValue().getTime()}</span>,
+      cell: info => (
+        <div className="max-w-[10rem]">
+          <span className="text-white">{info.getValue().toString()}</span>
+        </div>
+      ),
       footer: timeStamp => timeStamp.column.id,
     }),
     columnHelper.accessor(row => row.name, {
       sortingFn: 'auto',
       header: 'name',
-      cell: info => <span>{info.getValue()}</span>,
+      cell: info => <span className="text-white">{info.getValue()}</span>,
       footer: name => name.column.id,
     }),
   ];
